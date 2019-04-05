@@ -1,0 +1,38 @@
+{
+    "name": "germania-kg/acl",
+
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carsten Witt",
+            "email": "carstenwitt@germania-kg.de",
+            "role": "Developer"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Germania\\Acl\\": "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": { "tests\\": "tests/src" }
+    },
+
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.12",      
+        "php-coveralls/php-coveralls": "^2.0",
+        "phpunit/phpunit": "^5.7|^6.0|^7.0"
+    },
+    
+    "scripts": {
+        "phpcs": "php-cs-fixer fix -v --diff --dry-run --allow-risky=yes src/",
+        "phpcs-apply": "php-cs-fixer fix -vv --allow-risky=yes src/",
+        "phpunit": "phpunit --colors=auto --coverage-text",
+        "test": [
+            "@phpcs",
+            "@phpunit"
+        ]
+    }
+}
