@@ -26,11 +26,12 @@ class AclPermittedFilterIterator extends \FilterIterator
     {
         $current = $this->getInnerIterator()->current();
 
-        if ($current instanceof AclProviderInterface):
+        if ($current instanceof AclProviderInterface) {
             $item_acl = $current->getAccessControlList();
-        $result = array_intersect($this->user_acl, $item_acl);
-        return count($result) > 0;
-        endif;
+            $result = array_intersect($this->user_acl, $item_acl);
+
+            return count($result) > 0;
+        }
 
         return false;
     }
