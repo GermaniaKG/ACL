@@ -22,6 +22,7 @@ class AclPermittedFilterIterator extends \FilterIterator
     }
 
 
+    #[\ReturnTypeWillChange]
     public function accept()
     {
         $current = $this->getInnerIterator()->current();
