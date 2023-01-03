@@ -9,8 +9,8 @@ on:
 
 jobs:
 
-  phpunit:
-    name: PHPUnit
+  php:
+    name: CI
     runs-on: ubuntu-latest
 
     strategy:
@@ -40,3 +40,6 @@ jobs:
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit tests
+
+      - name: Run phpstan
+        run: vendor/bin/phpstan analyse
