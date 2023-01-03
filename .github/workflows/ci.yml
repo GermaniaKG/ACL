@@ -20,6 +20,8 @@ jobs:
           - "8.0"
           - "8.1"
           - "8.2"
+        dependency-versions:
+          - "highest"
 
     steps:
       - name: Checkout Repository
@@ -33,6 +35,8 @@ jobs:
 
       - name: Install composer dependencies
         uses: ramsey/composer-install@v2
+        with:
+          dependency-versions: ${{ matrix.dependency-versions }}
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit tests
