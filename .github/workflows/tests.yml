@@ -1,5 +1,5 @@
-# ci.yml
-name: CI
+# Tests.yml
+name: Tests
 
 on:
   push:
