@@ -3,7 +3,7 @@
 
 [![Packagist](https://img.shields.io/packagist/v/germania-kg/acl.svg?style=flat)](https://packagist.org/packages/germania-kg/acl)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/acl.svg)](https://packagist.org/packages/germania-kg/acl)
-[![Tests](https://github.com/GermaniaKG/ACL/actions/workflows/php.yml/badge.svg)](https://github.com/GermaniaKG/ACL/actions/workflows/php.yml)
+[![Tests](https://github.com/GermaniaKG/ACL/actions/workflows/tests.yml/badge.svg)](https://github.com/GermaniaKG/ACL/actions/workflows/tests.yml)
 
 ## Installation with Composer
 

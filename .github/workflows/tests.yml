@@ -1,11 +1,11 @@
-# ci.yml
-name: CI
+# Tests.yml
+name: Tests
 
 on:
   push:
-    branches: [main, develop]
+    branches: [master, develop]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
 
@@ -20,6 +20,8 @@ jobs:
           - "8.0"
           - "8.1"
           - "8.2"
+        dependency-versions:
+          - "highest"
 
     steps:
       - name: Checkout Repository
@@ -33,6 +35,8 @@ jobs:
 
       - name: Install composer dependencies
         uses: ramsey/composer-install@v2
+        with:
+          dependency-versions: ${{ matrix.dependency-versions }}
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit tests
